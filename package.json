@@ -1,27 +1,26 @@
 {
-  "name": "goit-js-hw-08",
+  "name": "goit-js-hw-10",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://b3dyk.github.io/goit-js-hw-08",
+  "homepage": "https://b3dyk.github.io/goit-js-hw-10",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/b3dyk/goit-js-hw-08.git"
+    "url": "git+https://github.com/b3dyk/goit-js-hw-10.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/b3dyk/goit-js-hw-08/issues"
+    "url": "https://github.com/b3dyk/goit-js-hw-10/issues"
   },
   "dependencies": {
-    "@vimeo/player": "^2.18.0",
-    "lodash.throttle": "^4.1.1",
+    "lodash.debounce": "^4.0.8",
     "modern-normalize": "^1.1.0",
-    "simplelightbox": "^2.10.4"
+    "notiflix": "^3.2.5"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
