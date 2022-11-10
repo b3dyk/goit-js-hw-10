@@ -1,6 +1,6 @@
 import './css/styles.css';
 import debounce from 'lodash.debounce';
-import API from './fetchCountries';
+import { fetchCountries } from './fetchCountries';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const DEBOUNCE_DELAY = 300;
@@ -26,7 +26,7 @@ function onInput(e) {
     return;
   }
 
-  API.fetchCountries(input).then(onResponse).catch(onError);
+  fetchCountries(input).then(onResponse).catch(onError);
 }
 
 function onResponse(resp) {
@@ -74,7 +74,7 @@ function createCard(country) {
           svg = 'https://static2.bigstockphoto.com/9/3/2/large2/239169784.jpg';
         }
         Notify.success(
-          `Here you go! You were looking for ${official}, aren't you?`
+          `Here you go! You were looking for ${official}, weren't you?`
         );
 
         return `<div class="wrapper"><img class="card__flag" src="${svg}"><h2 class="card__title">${official}</h2></div>

@@ -3,13 +3,7 @@ const params = new URLSearchParams({
   fields: 'name,capital,population,flags,languages',
 });
 
-function fetchCountries(input) {
-  return fetch(`${url}/v3.1/name/${input}?${params}`).then(r => {
-    if (!r.ok) {
-      throw new Error(r.statusText);
-    }
-    return r.json();
-  });
+export async function fetchCountries(input) {
+  const response = await fetch(`${url}/v3.1/name/${input}?${params}`);
+  return await response.json();
 }
-
-export default { fetchCountries };
