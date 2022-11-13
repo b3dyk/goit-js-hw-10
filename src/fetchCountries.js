@@ -11,7 +11,7 @@ export async function fetchCountries(input) {
       throw new Error(response.status);
     }
 
-    return await response.json();
+    return response.json();
   } catch (error) {
     console.log(error);
   }
